@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us – IHURIRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Overlay -->
+<div class="overlay" id="menuOverlay"></div>
+
+<!-- NAVIGATION -->
+<header class="nav-header">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="../images/logo-tree.png" alt="IHURIRO logo">
+      <span>HURIRO</span>
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="menuToggle">☰</div>
+
+    <!-- NAV LINKS -->
+    <nav class="nav-links" id="navMenu">
+      <a href="index.html">All</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="terms.html">Terms</a>
+      <a href="register.html">Register</a>
+      <a href="../rw/index.html">Kinyarwanda</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO CONTAINER -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>Contact Us</h1>
+    <p>We are here to help you access household worker information in a safe and reliable way.</p>
+  </div>
+</section>
+
+<!-- CONTACT FORM CONTAINER -->
+<main class="content-box" style="background:#fff; padding:25px; border-radius:12px; max-width:900px; margin:30px auto; box-shadow:0 4px 12px rgba(0,0,0,0.15); text-align:justify;">
+  
+  <h2 style="text-align:center; color:#000;">Our Contact Information</h2>
+
+  <div class="contact-item">
+    <span style="color:#000; font-weight:bold;">Phone:</span>
+    <a href="tel:+250780416842">+250 780 416 842</a>
+  </div>
+
+  <div class="contact-item">
+    <span style="color:#000; font-weight:bold;">WhatsApp:</span>
+    <a href="https://wa.me/250780416842" target="_blank">+250 780 416 842</a>
+  </div>
+
+  <div class="contact-item">
+    <span style="color:#000; font-weight:bold;">General Inquiries:</span>
+    <span class="placeholder">Not Available</span>
+  </div>
+
+  <p>
+    You can also chat with us instantly using the Tawk.to widget located at the bottom right of the site.
+  </p>
+
+  <!-- Tawk.to -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/YOUR_TAWKTO_ID/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+</main>
+
+<footer class="footer">
+  © 2026 IHURIRO
+</footer>
+
+<!-- HAMBURGER SCRIPT -->
+<script>
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const hamburger = document.getElementById("menuToggle");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
+
+</body>
+</html>

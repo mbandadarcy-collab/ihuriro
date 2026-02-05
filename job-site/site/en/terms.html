@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terms & Conditions – IHURIRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Overlay -->
+<div class="overlay" id="menuOverlay"></div>
+
+<!-- NAVIGATION -->
+<header class="nav-header">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="../images/logo-tree.png" alt="IHURIRO logo">
+      <span>HURIRO</span>
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="menuToggle">☰</div>
+
+    <!-- NAV LINKS -->
+    <nav class="nav-links" id="navMenu">
+      <a href="index.html">All</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms</a>
+      <a href="register.html">Register</a>
+      <a href="../en/contact.html">English</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO CONTAINER -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>Terms & Conditions</h1>
+    <p>Rules governing the use of this platform and its security measures</p>
+  </div>
+</section>
+
+<!-- TERMS & CONDITIONS CONTAINER -->
+<main class="content-box" style="background:#fff; padding:25px 80px; border-radius:12px; max-width:900px; margin:30px auto; box-shadow:0 4px 12px rgba(0,0,0,0.15); text-align:justify; font-family: Arial, sans-serif; font-size:16px; line-height:1.6;">
+  
+  <h2 style="text-align:center; color:#000; font-weight:bold; font-size:20px; margin-bottom:20px;">Terms & Conditions</h2>
+
+  <p><strong>1. Purpose of the Platform:</strong><br>
+  Our platform helps you find reliable domestic workers quickly and safely. By using this platform, you agree to the terms and rules outlined here.</p>
+
+  <p><strong>2. Role of the Platform:</strong><br>
+  The platform only connects workers and employers. We do not manage salaries, contracts, or daily supervision. All work-related decisions are made directly between the worker and the employer.</p>
+
+  <p><strong>3. Registration & Information:</strong><br>
+  Workers must provide accurate and complete information. Employers must use this information appropriately. Providing false information may result in account suspension.</p>
+
+  <p><strong>4. Provided Materials:</strong><br>
+  Workers agree that the information provided is accurate. The platform may refuse, delete, or suspend accounts containing false information.</p>
+
+  <p><strong>5. Data Sharing Rights:</strong><br>
+  Worker information may be shared with employers so they can make informed decisions, including names, phone numbers, and submitted materials.</p>
+
+  <p><strong>6. Displaying Phone Numbers:</strong><br>
+  Worker phone numbers will not be visible until a verified payment is made through Flutterwave.</p>
+
+  <p><strong>7. Payment Procedures:</strong><br>
+  All payments are processed by the platform. Payments are non-refundable except in case of platform error.</p>
+
+  <p><strong>8. Employer Responsibilities:</strong><br>
+  Employers must use the platform lawfully. Misuse may result in account suspension or permanent termination.</p>
+
+  <p><strong>9. Data Privacy Policy:</strong><br>
+  All user information is stored securely and used solely for connecting workers with employers. Data is not sold or shared without the user’s consent.</p>
+
+  <p><strong>10. Changes to Terms:</strong><br>
+  These terms may be updated at any time. Continued use of the platform indicates acceptance of all changes.</p>
+
+  <p><strong>11. Contact:</strong><br>
+  For questions or concerns, contact the platform using the information provided on the website.</p>
+
+</main>
+
+<footer class="footer">
+  © 2026 IHURIRO
+</footer>
+
+<!-- HAMBURGER SCRIPT -->
+<script>
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const hamburger = document.getElementById("menuToggle");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
+
+</body>
+</html>

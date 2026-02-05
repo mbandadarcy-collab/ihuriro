@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IHURIRO – Live-out</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Overlay -->
+<div class="overlay" id="menuOverlay"></div>
+
+<!-- NAVIGATION -->
+<header class="nav-header">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo" style="display:flex; align-items:flex-end; gap:2px;">
+      <img src="../../images/logo-tree.png" alt="IHURIRO logo" style="height:60px;">
+      <span style="color:limegreen;font-family:Bahnschrift,sans-serif;font-size:22px;font-weight:300;">HURIRO</span>
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="menuToggle">☰</div>
+
+    <!-- NAV LINKS -->
+    <nav class="nav-links" id="navMenu">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../register.html">Register</a>
+      <a href="../../en/index.html">English</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>Live-out Workers</h1>
+    <p>Workers who come to the employer’s home but return to their own home</p>
+  </div>
+</section>
+
+<!-- SORTING -->
+<section class="sorting">
+  <a href="../index.html" class="sort-btn">All</a>
+  <a href="live-in.html" class="sort-btn">Live-in</a>
+  <a href="live-out.html" class="sort-btn active">Live-out</a>
+  <a href="woman.html" class="sort-btn">Women</a>
+  <a href="man.html" class="sort-btn">Men</a>
+  <a href="education-secondary.html" class="sort-btn">Secondary Education</a>
+  <a href="language.html" class="sort-btn">Multiple Languages</a>
+</section>
+
+<!-- WORKERS -->
+<main class="worker-list">
+  <div class="worker-card">
+    <h2>Mary Mukamana</h2>
+    <p><strong>Age:</strong> 26</p>
+    <p><strong>Gender:</strong> Female</p>
+    <p><strong>Work Type:</strong> Live-out</p>
+    <p><strong>Languages:</strong> Kinyarwanda, English</p>
+    <p><strong>Location:</strong> Gasabo, Kigali</p>
+    <p><strong>Phone:</strong> 07** *** ***</p>
+
+    <button class="unlock-btn" disabled>Show Number</button>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  © 2026 IHURIRO
+</footer>
+
+<!-- MENU SCRIPT -->
+<script>
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const hamburger = document.getElementById("menuToggle");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
+
+</body>
+</html>

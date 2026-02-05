@@ -1,0 +1,250 @@
+<!DOCTYPE html>  
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <title>IHURIRO – Intambwe ya 1: Kwiyandikisha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Supabase UMD -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("../images/background.jpg") center/cover no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+    }
+    section.hero {
+      position: relative;
+      text-align: center;
+      padding: 140px 20px 80px 20px;
+    }
+    section.hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right:0; bottom:0;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .hero-box {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-box h1 { margin-bottom: 10px; font-size: 36px; }
+    .hero-box p { margin: 0; font-size: 18px; }
+
+    .form-container {
+      max-width: 700px;
+      margin: 40px auto 80px auto;
+      background: rgba(255,255,255,0.95);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .form-container h2 { font-size: 28px; margin-bottom: 10px; color: #222; }
+    .form-container p { color: #333; margin-bottom: 20px; }
+
+    .form-group { margin-bottom: 18px; display: flex; flex-direction: column; }
+    .form-group label { font-weight: 600; margin-bottom: 6px; color: #222; }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      background: rgba(0,0,0,0.05);
+      color: #000;
+    }
+
+    textarea { resize: vertical; min-height: 80px; }
+
+    .checkbox-group { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 6px; }
+    .checkbox-group label { display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer; }
+    .checkbox-group input { transform: scale(1.1); }
+
+    .next-of-kin {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .next-of-kin input { flex: 1; min-width: 120px; }
+
+    .terms { margin-top: 20px; }
+    .submit-btn {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background: limegreen;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .submit-btn:hover { background: #2e9e2e; }
+
+    .success {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background: #e8ffe8;
+      color: #1c7c1c;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    @media(max-width: 600px){
+      .next-of-kin { flex-direction: column; }
+      .hero-box h1 { font-size: 28px; }
+      .hero-box p { font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-box">
+    <h1>Kwiyandikisha</h1>
+    <p>Amakuru azasuzumwa mbere yo kwemezwa</p>
+  </div>
+</section>
+
+<div class="form-container">
+  <h2>Intambwe ya 1: Kwiyandikisha</h2>
+  <p>Uzuza amakuru yose neza</p>
+
+  <form id="registerForm">
+
+    <div class="form-group">
+      <label>Amazina yose</label>
+      <input type="text" id="fullname" required>
+    </div>
+
+    <div class="form-group">
+      <label>Imyaka</label>
+      <input type="number" id="age" required>
+    </div>
+
+    <div class="form-group">
+      <label>Igitsina</label>
+      <select id="sex" required>
+        <option value="">-- Hitamo --</option>
+        <option value="Gabo">Gabo</option>
+        <option value="Gore">Gore</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Uburyo ukoramo</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" value="Uba mu rugo"> Uba mu rugo</label>
+        <label><input type="checkbox" value="Utaha"> Utaha</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Amashuri</label>
+      <select id="education">
+        <option value="">Nta mashuri</option>
+        <option value="Abanza">Abanza</option>
+        <option value="Ayisumbuye">Ayisumbuye</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Numero ya telefone</label>
+      <input type="text" id="phone" required>
+    </div>
+
+    <div class="form-group">
+      <label>Indimi</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" value="Kinyarwanda"> Kinyarwanda</label>
+        <label><input type="checkbox" value="English"> English</label>
+        <label><input type="checkbox" value="Français"> Français</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Uwo mu muryango (1)</label>
+      <div class="next-of-kin">
+        <input type="text" id="kn1_name" placeholder="Izina" required>
+        <input type="text" id="kn1_phone" placeholder="Telefoni" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Uwo mu muryango (2)</label>
+      <div class="next-of-kin">
+        <input type="text" id="kn2_name" placeholder="Izina" required>
+        <input type="text" id="kn2_phone" placeholder="Telefoni" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Ibisobanuro byiyongera</label>
+      <textarea id="notes"></textarea>
+    </div>
+
+    <div class="terms checkbox-group">
+      <label>
+        <input type="checkbox" id="terms" required>
+        <span style="color:#000;">Nemeye amategeko n’amabwiriza</span> (
+        <a href="./terms.html" target="_blank">Terms & Conditions</a>
+        )
+      </label>
+    </div>
+
+    <button type="submit" class="submit-btn">Ohereza</button>
+    <div class="success" id="successMsg">Kwiyandikisha byoherejwe neza 🎉</div>
+  </form>
+</div>
+
+<script>
+  const supabaseUrl = "https://rstfzxcvcsejzcaagwos.supabase.co";
+  const supabaseKey = "sb_publishable_KyIlY2b0o5OJaWvjN2zgYQ_4hAeBqsF";
+  const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+  document.getElementById("registerForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const worktype = [...document.querySelectorAll('input[value="Uba mu rugo"], input[value="Utaha"]')]
+      .filter(c => c.checked).map(c => c.value);
+
+    const language = [...document.querySelectorAll('input[value="Kinyarwanda"], input[value="English"], input[value="Français"]')]
+      .filter(c => c.checked).map(c => c.value);
+
+    const data = {
+      fullname: document.getElementById("fullname").value,
+      age: Number(document.getElementById("age").value),
+      sex: document.getElementById("sex").value,
+      phone: document.getElementById("phone").value,
+      worktype,
+      education: document.getElementById("education").value,
+      language,
+      kn1: "Name: " + document.getElementById("kn1_name").value + ", Phone: " + document.getElementById("kn1_phone").value,
+      kn2: "Name: " + document.getElementById("kn2_name").value + ", Phone: " + document.getElementById("kn2_phone").value,
+      notes: document.getElementById("notes").value
+    };
+
+    const { error } = await supabaseClient.from("workers").insert([data]);
+    if (error) { alert(error.message); return; }
+
+    document.getElementById("successMsg").style.display = "block";
+    document.getElementById("registerForm").reset();
+
+    setTimeout(() => { window.location.href = "upload.html"; }, 2000);
+  });
+</script>
+
+</body>
+</html>

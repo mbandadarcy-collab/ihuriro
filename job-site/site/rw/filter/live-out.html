@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <title>IHURIRO – Utaha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Overlay -->
+<div class="overlay" id="menuOverlay"></div>
+
+<!-- NAVIGATION -->
+<header class="nav-header">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo" style="display:flex; align-items:flex-end; gap:2px;">
+      <img src="../../images/logo-tree.png" alt="IHURIRO logo" style="height:60px;">
+      <span style="color:limegreen;font-family:Bahnschrift,sans-serif;font-size:22px;font-weight:300;">HURIRO</span>
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="menuToggle">☰</div>
+
+    <!-- NAV LINKS -->
+    <nav class="nav-links" id="navMenu">
+      <a href="../index.html">Ahabanza</a>
+      <a href="../about.html">Ibitwerekeyeho</a>
+      <a href="../contact.html">Twandikire</a>
+      <a href="../terms.html">Amategeko</a>
+      <a href="../register.html">Iyandikishe</a>
+      <a href="../../en/index.html">English</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>Abakozi Utaha</h1>
+    <p>Abakozi baza hanyuma bagasubira mu rugo rwabo</p>
+  </div>
+</section>
+
+<!-- SORTING -->
+<section class="sorting">
+  <a href="../index.html" class="sort-btn">Byose</a>
+  <a href="live-in.html" class="sort-btn">Uba mu rugo</a>
+  <a href="live-out.html" class="sort-btn active">Utaha</a>
+  <a href="woman.html" class="sort-btn">Abagore</a>
+  <a href="man.html" class="sort-btn">Abagabo</a>
+  <a href="education-secondary.html" class="sort-btn">Amashuri yisumbuye</a>
+  <a href="language.html" class="sort-btn">Indimi nyinshi</a>
+</section>
+
+<!-- WORKERS -->
+<main class="worker-list">
+  <div class="worker-card">
+    <h2>Mary Mukamana</h2>
+    <p><strong>Imyaka:</strong> 26</p>
+    <p><strong>Igitsina:</strong> Gore</p>
+    <p><strong>Uburyo akoramo:</strong> Utaha</p>
+    <p><strong>Indimi:</strong> Ikinyarwanda, Icyongereza</p>
+    <p><strong>Aherereye:</strong> Gasabo, Kigali</p>
+    <p><strong>Telefoni:</strong> 07** *** ***</p>
+
+    <button class="unlock-btn" disabled>Fungura nimero</button>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  © 2026 IHURIRO
+</footer>
+
+<!-- MENU SCRIPT -->
+<script>
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const hamburger = document.getElementById("menuToggle");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
+
+</body>
+</html>

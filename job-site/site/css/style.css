@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #212121;
+  background: url("../images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.nav-header {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding: 12px 0;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.logo span {
+  font-family: Bahnschrift, sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: limegreen;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-box {
+  display: inline-block;
+  background: rgba(0,0,0,0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.hero-box h1,
+.hero-box p {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  margin: 0;
+}
+
+.hero-box h1 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.sorting {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.sort-btn {
+  padding: 10px 16px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.sort-btn:hover {
+  background: #0056b3;
+}
+
+.worker-list {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .worker-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.worker-card {
+  background: #fff;
+  padding: 18px 22px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.worker-card h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.worker-card p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.unlock-btn {
+  margin-top: 12px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #aaa;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.unlock-btn:hover:enabled {
+  background: #007bff;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 18px;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+/* Justified content, centered headers, mobile padding */
+.content-box {
+  text-align: justify;
+}
+
+.content-box h2 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    color: #000;
+    background: #fff; /* white background for hamburger icon */
+    padding: 6px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1003; /* higher than overlay and menu */
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    padding-top: 60px;
+    gap: 0;
+    background: rgba(0,0,0,0.85); /* dark transparent menu background */
+    box-shadow: -3px 0 10px rgba(0,0,0,0.4);
+    transition: right 0.3s ease;
+    z-index: 1002;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    color: #fff;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: rgba(0,0,0,0.85);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  /* Mobile padding for content box */
+  .content-box {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}

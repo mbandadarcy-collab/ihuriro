@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+  <meta charset="UTF-8">
+  <title>Amategeko n’Amabwiriza – IHURIRO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Overlay -->
+<div class="overlay" id="menuOverlay"></div>
+
+<!-- NAVIGATION -->
+<header class="nav-header">
+  <div class="nav-container">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="../images/logo-tree.png" alt="IHURIRO logo">
+      <span>HURIRO</span>
+    </div>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="menuToggle">☰</div>
+
+    <!-- NAV LINKS -->
+    <nav class="nav-links" id="navMenu">
+      <a href="index.html">Byose</a>
+      <a href="about.html">Ibyerekeye</a>
+      <a href="contact.html">Twandikire</a>
+      <a href="terms.html">Amategeko</a>
+      <a href="register.html">Kwiyandikisha</a>
+      <a href="../en/contact.html">English</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO CONTAINER -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>Amategeko n’Amabwiriza</h1>
+    <p>Amategeko agenga gukoresha uru rubuga n’uburyo bw’umutekano</p>
+  </div>
+</section>
+
+<!-- TERMS & CONDITIONS CONTAINER -->
+<main class="content-box" style="background:#fff; padding:25px 80px; border-radius:12px; max-width:900px; margin:30px auto; box-shadow:0 4px 12px rgba(0,0,0,0.15); text-align:justify; font-family: Arial, sans-serif; font-size:16px; line-height:1.6;">
+  
+  <h2 style="text-align:center; color:#000; font-weight:bold; font-size:20px; margin-bottom:20px;">Amategeko n’Amabwiriza</h2>
+
+  <p><strong>1. Intego y’uru rubuga:</strong><br>
+  Urubuga rwacu rugufasha kubona abakozi bo mu rugo bizewe mu buryo bwihuse kandi butekanye. Ukoresha uru rubuga wemera amategeko n’amabwiriza ari hano.</p>
+
+  <p><strong>2. Uruhare rwa Platform:</strong><br>
+  Platform ihuza gusa abakozi n’abakoresha. Ntabwo dutunganya imishahara, amasezerano, cyangwa imicungire ya buri munsi. Ibyemezo byose bijyanye n’akazi bifatwa hagati y’umukozi n’umukoresha.</p>
+
+  <p><strong>3. Kwiyandikisha & Amakuru:</strong><br>
+  Abakozi bagomba gutanga amakuru y’ukuri kandi yuzuye. Abakoresha bagomba gukoresha aya makuru mu buryo bukwiriye. Gutanga amakuru atari yo bishobora gutuma konti isubikwa.</p>
+
+  <p><strong>4. Ibikoresho Byatanzwe:</strong><br>
+  Abakozi bemera ko ibikoresho byatanzwe ari ukuri. Platform ishobora kwanga, gusiba, cyangwa gusubika konti zifite amakuru atari yo.</p>
+
+  <p><strong>5. Uburenganzira ku Gusangiza Amakuru:</strong><br>
+  Amakuru y’umukozi ashobora gusangizwa abakoresha kugira ngo bafate ibyemezo byubakiye ku makuru, harimo amazina, nimero za telefone, n’ibikoresho byatanzwe.</p>
+
+  <p><strong>6. Kwerekana Nimero za Telefone:</strong><br>
+  Nimero za telefone z’abakozi ntizizagaragara kugeza igihe kwishyura byizewe bikorwa hifashishijwe Flutterwave.</p>
+
+  <p><strong>7. Uko Kwishyura Bikora:</strong><br>
+  Amafaranga yose ashyirwaho na platform. Kwishyura ntibisubizwa keretse habayeho ikosa rya platform.</p>
+
+  <p><strong>8. Inshingano z’Abakoresha:</strong><br>
+  Abakoresha bagomba gukoresha platform mu buryo bwubahiriza amategeko. Gukoresha nabi bishobora gutuma konti isubikwa cyangwa ihagarikwa burundu.</p>
+
+  <p><strong>9. Politiki y’Ubwirinzi bw’Amakuru:</strong><br>
+  Amakuru yose y’abakoresha abikwa mu buryo butekanye kandi akoreshwa gusa mu guhuza abakozi n’abakoresha. Amakuru ntagurishwa cyangwa ngo asangirwe nta burenganzira bw’umukoresha.</p>
+
+  <p><strong>10. Impinduka ku Mategeko:</strong><br>
+  Aya mategeko ashobora guhindurwa igihe icyo ari cyo cyose. Gukomeza gukoresha platform bivuze ko wemeye impinduka zose.</p>
+
+  <p><strong>11. Uburyo bwo Kuvugana:</strong><br>
+  Ku bibazo cyangwa imikoro, hamagara platform ukoresheje amakuru ari ku rubuga.</p>
+
+</main>
+
+<footer class="footer">
+  © 2026 IHURIRO
+</footer>
+
+<!-- HAMBURGER SCRIPT -->
+<script>
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const hamburger = document.getElementById("menuToggle");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
+
+</body>
+</html>
